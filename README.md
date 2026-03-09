@@ -279,7 +279,6 @@ Ce projet met en avant mes compétences en :
 - 🔗 LinkedIn: [linkedin.com/in/belaid-azil-42b30a2ba](https://linkedin.com/in/belaid-azil-42b30a2ba)
 - 💻 GitHub: [github.com/Azilbelaid](https://github.com/Azilbelaid)
 - 🎓 Étudiant en L3 Informatique - Université de Caen Normandie
-- 🎯 Spécialisation: Cybersécurité
 
 ---
 
@@ -287,14 +286,5 @@ Ce projet met en avant mes compétences en :
 
 Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
----
-
-## 🙏 Remerciements
-
-Projet développé dans le cadre de ma formation en cybersécurité et de ma candidature aux Masters :
-- 🎓 Guardia Cybersecurity School - Mastère Expert Offensive/Défensive
-- 🎓 ESGI Paris - Master Cybersécurité en Alternance
-
----
 
 **⭐ Si ce projet vous a été utile, n'hésitez pas à le partager ! ⭐**
