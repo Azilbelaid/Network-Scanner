@@ -11,6 +11,7 @@ import socket
 import sys
 import json
 import argparse
+import os
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import ipaddress
@@ -237,8 +238,17 @@ class NetworkScanner:
         print("="*60 + "\n")
     
     def generate_txt_report(self, filename='scan_report.txt'):
-        """Génère un rapport texte"""
-        with open(filename, 'w', encoding='utf-8') as f:
+        """Génère un rapport texte dans le dossier rapports/"""
+        # Créer le dossier rapports s'il n'existe pas
+        reports_dir = 'rapports'
+        if not os.path.exists(reports_dir):
+            os.makedirs(reports_dir)
+            print(f"[+] Dossier '{reports_dir}/' créé")
+        
+        # Chemin complet du fichier
+        filepath = os.path.join(reports_dir, filename)
+        
+        with open(filepath, 'w', encoding='utf-8') as f:
             f.write("="*70 + "\n")
             f.write("  RAPPORT D'ANALYSE RÉSEAU\n")
             f.write("="*70 + "\n\n")
@@ -273,14 +283,22 @@ class NetworkScanner:
                 f.write(f"{key}: {value}\n")
             f.write("="*70 + "\n")
         
-        print(f"[+] Rapport TXT généré: {filename}")
+        print(f"[+] Rapport TXT généré: {filepath}")
     
     def generate_json_report(self, filename='scan_report.json'):
-        """Génère un rapport JSON"""
-        with open(filename, 'w', encoding='utf-8') as f:
+        """Génère un rapport JSON dans le dossier rapports/"""
+        # Créer le dossier rapports s'il n'existe pas
+        reports_dir = 'rapports'
+        if not os.path.exists(reports_dir):
+            os.makedirs(reports_dir)
+        
+        # Chemin complet du fichier
+        filepath = os.path.join(reports_dir, filename)
+        
+        with open(filepath, 'w', encoding='utf-8') as f:
             json.dump(self.results, f, indent=2, ensure_ascii=False)
         
-        print(f"[+] Rapport JSON généré: {filename}")
+        print(f"[+] Rapport JSON généré: {filepath}")
 
 
 def main():

@@ -1,0 +1,28 @@
+# Dossier des rapports de scan
+rapports/
+
+# Fichiers de rapports (si générés à la racine par erreur)
+*.txt
+*.json
+
+# Fichiers Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Environnements virtuels
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Système
+.DS_Store
+Thumbs.db
